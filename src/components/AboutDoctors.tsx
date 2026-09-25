@@ -6,7 +6,7 @@ import { CheckCircle, Award, Heart, Baby } from "lucide-react";
 
 const doctors = [
   {
-    emoji: "👨‍⚕️",
+    photo: "/sahir.jpg",
     name: "Dr. Sahir",
     degree: "MBBS, General Physician",
     speciality: "General Physician",
@@ -35,7 +35,7 @@ const doctors = [
     icon: Heart,
   },
   {
-    emoji: "👩‍⚕️",
+    photo: "/anjum.jpg",
     name: "Dr. Anjum",
     degree: "MBBS, MS Gynecology",
     speciality: "Gynecologist",
@@ -116,13 +116,16 @@ export default function AboutDoctors() {
               <div className="p-7 md:p-8">
                 {/* Doctor Info Header */}
                 <div className="flex items-start gap-5 mb-6">
+
                   {/* Avatar */}
                   <div className="relative flex-shrink-0">
                     <div
-                      className={`w-20 h-20 ${doc.iconBg} rounded-2xl flex items-center justify-center text-5xl shadow-sm border-2 border-white`}
+                      className={`w-20 h-20 ${doc.iconBg} items-center justify-center text-5xl shadow-sm border-2 border-white`}
                     >
-                      {doc.emoji}
+                      <img src={doc.photo} alt={doc.name} className="object-cover"/>
+                      
                     </div>
+
                     <div
                       className={`absolute -bottom-1.5 -right-1.5 ${doc.badgeBg} text-white text-[10px] font-bold px-2 py-1 rounded-lg shadow-lg whitespace-nowrap`}
                     >
